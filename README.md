@@ -59,6 +59,8 @@ C:\Program Files\Tesseract-OCR\tesseract.exe for 32bit users
 Ignore the rest of this file if you have a pre-packaged
 version of this software.
 
+If you are cloning this from github, it is not 'pre-packaged'
+
 -----------------------------------------------------------------------
 
 More setup:

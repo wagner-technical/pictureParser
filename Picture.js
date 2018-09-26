@@ -71,7 +71,6 @@ module.exports = class Picture {
   }
   async parse() {
     if (!this.fsStats) this.fsStats = await this.getStats()
-    // console.log(this.fsStats)
     if (!this.path.toLowerCase().includes('.jpg') && !this.path.toLowerCase().includes('.png')) {
       console.log('must be .png or .jpg:', this.path)
       this.isScreenshot = false
@@ -80,7 +79,6 @@ module.exports = class Picture {
     }
     // return true
     if (this.fsStats.size > 500000) {
-      // console.log('ok'.repeat(10))
       this.isScreenshot = false
       return false
     } else this.isScreenshot = true
@@ -139,7 +137,7 @@ module.exports = class Picture {
                   console.log(this.path,`Changed ${match.type} ${this.text[idx+1]} to ${foundInfo}.`)
                 }
                 else {
-                  // console.log(this.path,`Found ${match.type} ${foundInfo}, expected a number. If you think this is an issue with tesseract, you can add character conversion definitions to /config/charToNum.js`)
+                  console.log(this.path,`Found ${match.type} ${foundInfo}, expected a number. If you think this is an issue with tesseract, you can add character conversion definitions to /config/charToNum.js`)
                   foundInfo = ''
                 }
               } // the number response was actually a number, no need to manipulate
