@@ -15,11 +15,7 @@ IMPORTANT: Name cannot use curly braces other than to instruct
 
 module.exports = {
     "formats" : [
-        "Item_{itemNo}_Pole_{elecTag}",
-        "Item_{itemNo}_Pole_{telTag}",
-        "Item_{itemNo}_Pole_NT",
-        "{appNo}",
-        "Group {groupNo}"
+        "{FLOC}"
     ],
     "default" : "skipped"
 }

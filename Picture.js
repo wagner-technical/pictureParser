@@ -89,7 +89,7 @@ module.exports = class Picture {
                     .replace(/pay/g,'')
                     .replace(/\//g,'-')
                     .trim()
-      ).filter(el => el.trim() !== '')   
+      ).filter(el => el.trim() !== '')     
     
     const findInText = require('./config/findInText.js')
     const matches = Object.assign({}, findInText)

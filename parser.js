@@ -5,7 +5,13 @@ let pythonBridge = require('python-bridge');
 const Picture = require("./Picture.js");
 const fs = require("fs");
 
-let python = pythonBridge();
+const options = {
+  python: 'python3',
+  env: {PYTHONPATH: 'C:/Windows'}
+}
+
+let python = pythonBridge(options);
+
 
 python.ex`import tkinter as tk`
 python.ex`from tkinter import filedialog`
@@ -25,7 +31,7 @@ const parse = async function() {
   let path = await python`filedialog.askdirectory(initialdir=${initDir})`//.then(x=>console.log(x))
   console.log('Parsing '+path+'...')
   let pictures = [], picture, currentName
-  let files = fs.readdirSync(path)  
+  let files = fs.readdirSync(path) 
   
   for (let i=0; i < files.length; i++) {
     picture = new Picture(path, files[i])

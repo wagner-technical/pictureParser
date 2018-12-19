@@ -44,54 +44,13 @@
 
 module.exports = {
 
-    "Group number" : {
-        "key" : "groupNo",
-        "type" : "header",
-        "tags" : [
-            "labella",
-            "group"
-        ]
-    },
-
-    "Application ID" : {
-        "key" : "appNo",
-        "type" : "number response",
-        "tags" : [
-            "application"
-        ],
-        "isNot" : "Pole No ELEC"
-    },
-
-    "Item number" : {
-        "key" : "itemNo",
-        "type" : "number response",
-        "tags" : [
-            "item",
-            "no"
-        ],
-        "isNot" : "Page"
-    },
-
-    "Pole tag elec" : {
-        "key" : "elecTag",
+    "FLOC" : {
+        "key" : "FLOC",
         "type" : "response",
         "tags" : [
-            "pole",
-            "no",
-            "elec"
+            "funcloc"
         ],
-        "isNot" : "Pole No TEL"
-    },
-
-    "Pole tag tel" : {
-        "key" : "telTag",
-        "type" : "response",
-        "tags" : [
-            "pole",
-            "no",
-            "tel"
-        ],
-        "isNot" : "Field Checked"
+        "isNot" : "Tree Trimming"
     }
 
     // add your own matches here
