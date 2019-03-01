@@ -147,8 +147,12 @@ module.exports = class Picture {
           }
           else throw `${match.type} is not a valid match type! see match ${m} in /config/findInText.js`
           
-          if (foundInfo.trim() !== match.isNot && foundInfo !== '') 
-            this[match.key] = foundInfo.trim()
+          if (!foundInfo) {
+            console.log(match.type, this.text[idx])
+          } else {
+            if (foundInfo.trim() !== match.isNot && foundInfo !== '') 
+              this[match.key] = foundInfo.trim()
+          }
         } 
       }
     }
